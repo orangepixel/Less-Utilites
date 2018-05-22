@@ -1,0 +1,70 @@
+/* media query shortcuts for single queries */
+/* ================================ */
+/* ================================ */
+/* DO NOT MODIFY THIS FILE */
+/* ================================ */
+/* ================================ */
+
+
+@320: ~"screen and (min-width: 0px) and (max-width: 379px)";
+@320_lanscape:~"screen and (min-width: 0px) and (max-width: 379px) and (orientation:landscape)";
+@480: ~"screen and (min-width: 380px) and (max-width: 519px)";
+@480_lanscape:~"screen and (min-width: 380px) and (max-width: 519px) and (orientation:landscape)";
+@520: ~"screen and (min-width: 520px) and (max-width: 599px)";
+@520_lanscape: ~"screen and (min-width: 520px) and (max-width: 599px) and (orientation:landscape)";
+@phone: ~"screen and (min-width: 1px) and (max-width: 599px)";
+@mobile: @phone;//alias
+@600: ~"screen and (min-width: 600px) and (max-width: 699px)";
+@600_lanscape: ~"screen and (min-width: 600px) and (max-width: 699px) and (orientation:landscape)";
+@700: ~"screen and (min-width: 700px) and (max-width: 799px)";
+@700_lanscape: ~"screen and (min-width: 700px) and (max-width: 799px) and (orientation:landscape)";
+@768: ~"screen and (min-width: 768px)";
+@tablet: ~"screen and (min-width: 600px) and (max-width: 799px)";
+@800: ~"screen and (min-width: 800px) and (max-width: 919px)";
+@odd-device: ~"screen and (min-width: 800px) and (max-width: 919px)";
+@odddevice: @odd-device;//alias
+@920: ~"screen and (min-width: 920px) and (max-width: 999px)";
+@desktop: ~"screen and (min-width: 920px) and (max-width: 1920px)";
+@1000: ~"screen and (min-width: 1000px) and (max-width: 1199px)";
+@1080: ~"screen and (min-width: 1080px)";
+@1200: ~"screen and (min-width: 1200px) and (max-width: 1439px)";
+@1440: ~"screen and (min-width: 1440px) and (max-width: 1599px)";
+@1600: ~"screen and (min-width: 1600px) and (max-width: 1700px)";
+@fullScreen: ~"screen and (min-width: 1439px)";
+@off-canvas: ~"screen and (max-width: 915px)";
+@offcanvas: @off-canvas;//alias
+
+
+/* override the default classes when no grid is present*/
+.hide-desktop { 
+    @media @desktop { .hide !important;}
+}
+.hide-odd { 
+    @media @odd-device { .hide !important;}
+}
+.hide-tablet { 
+    @media @tablet { .hide !important;}
+}
+.hide-mobile { 
+    @media @mobile { .hide !important;}
+}
+.show-desktop {
+    @media @mobile { .hide !important;}
+    @media @odd-device { .hide !important;}
+    @media @tablet { .hide !important;}
+}
+.show-odd {
+    @media @desktop { .hide !important;}
+    @media @mobile { .hide !important;}
+    @media @tablet { .hide !important;}
+}
+.show-tablet {
+    @media @desktop { .hide !important;}
+    @media @odd-device { .hide !important;}
+    @media @mobile { .hide !important;}
+}
+.show-mobile {
+    @media @desktop { .hide !important;}
+    @media @odd-device { .hide !important;}
+    @media @tablet { .hide !important;}
+}
